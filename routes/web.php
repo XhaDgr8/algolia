@@ -16,3 +16,14 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/scrapper', 'ScrappersController@index');
+Route::get('/scrapper/{name}/{projectToken}/{authToken}', 'ScrappersController@scrapper');
+
+Route::get('/projectRun/{projectToken}/{authToken}', 'ScrappersController@projectRun');
+
+Route::get('/refine/{name}/{authToken}/{runToken}/Brabys', 'ScrappersController@Brabys');
+
+Route::get('/scrape/{runToken}/{authToken}/subaru', 'ScrappersController@subaru');
+Route::post('/scrapper/{id}/create', 'ScrappersController@store');
