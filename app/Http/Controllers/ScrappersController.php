@@ -60,7 +60,7 @@ class ScrappersController extends Controller
                                     $r_number_1 = array_key_exists('b_number_1', $bName) ? $bName['b_number_1'] : "N/A";
 
                                     $r_number_2 = array_key_exists('b_number_2', $bName) ? 
-                                                    v_email($bName['b_number_2']) == false ? $bName['b_number_2'] : $r_email = $bName['b_number_2'] : 'N/A' ;
+                                                    v_email($bName['b_number_2']) == false ? $bName['b_number_2'] : $r_email = $bName['b_number_2'] & 'N/a' : 'N/A' ;
                                     
                                     $r_image = array_key_exists('b_image', $bName) ? 
                                                 $bName['b_image'] == 'https://www.brabys.com/images/logo-placeholder.jpg' ?

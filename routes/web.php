@@ -18,6 +18,8 @@ Route::get('/', function () {
 });
 
 
+Route::get('/search', 'SearchController@index');
+
 Route::get('/scrapper', 'ScrappersController@index');
 Route::get('/scrapper/{name}/{projectToken}/{authToken}', 'ScrappersController@scrapper');
 
@@ -27,3 +29,6 @@ Route::get('/refine/{name}/{authToken}/{runToken}/Brabys', 'ScrappersController@
 
 Route::get('/scrape/{runToken}/{authToken}/subaru', 'ScrappersController@subaru');
 Route::post('/scrapper/{id}/create', 'ScrappersController@store');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
